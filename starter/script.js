@@ -1,5 +1,5 @@
 'use strict';
-/*
+/*///////////////////////////
 function colsAge(birthYear) {
   const age = 2037 - birthYear;
   function printAge() {
@@ -19,9 +19,9 @@ colsAge(1995);
 // console.log(age);
 // printAge();
 
-/*
+/*/ ////////////////////////////
 
-/*
+/*/////////////////////////////
 const jonas = {
   age: 1990,
   calcAge: function () {
@@ -31,9 +31,9 @@ const jonas = {
 };
 
 console.log(jonas.calcAge());
-*/
+*/ ////////////////////////////////
 
-/*
+/*////////////////////////////////
 //this keyword
 console.log(this);
 
@@ -67,4 +67,38 @@ const mathilda = {
 
 mathilda.calcAge = jonas.colcAge;
 mathilda.calcAge();
-*/
+*/ ///////////////////////////
+
+/*//////////////////////////////
+// Regular function vs. Arrow function
+const jonas = {
+  firstName: 'jonas',
+  year: 2000,
+  colcAge: function () {
+    console.log(2050 - this.year);
+    console.log(this);
+  },
+  greet: function () {
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+
+jonas.greet();
+jonas.colcAge();
+*/ /////////////////////////
+
+/*/////////////////////////
+//Argument keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(10, 5, 5);
+
+//Arguments keyword exits only in normal function not in Arrow function
+const addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(10, 5, 0);
+*/ ////////////////////////
