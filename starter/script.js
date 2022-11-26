@@ -1,4 +1,5 @@
 'use strict';
+/*
 function colsAge(birthYear) {
   const age = 2037 - birthYear;
   function printAge() {
@@ -17,3 +18,32 @@ const firstName = 'jonas';
 colsAge(1995);
 // console.log(age);
 // printAge();
+
+/*
+
+/*
+const jonas = {
+  age: 1990,
+  calcAge: function () {
+    const bd = 2050 - this.age;
+    return bd;
+  },
+};
+
+console.log(jonas.calcAge());
+*/
+
+const jonas = {
+  firstName: 'jonas',
+  year: 1995,
+  colcAge: function () {
+    console.log(2050 - this.year);
+  },
+  greet: function () {
+    console.log(this);
+    console.log(`hey ${this.firstName}`);
+  },
+};
+
+jonas.colcAge();
+jonas.greet();
