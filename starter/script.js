@@ -6,7 +6,7 @@ function colsAge(birthYear) {
     const output = `${firstName} you are ${age} years old and your birth year is ${birthYear}`;
     console.log(output);
     if (birthYear >= 1981 && birthYear <= 1996) {
-      const str = `oh, You are a millioner ${firstName}`;
+      const str = `oh, You are a millionaire ${firstName}`;
       console.log(str);
     }
   }
@@ -33,17 +33,38 @@ const jonas = {
 console.log(jonas.calcAge());
 */
 
+/*
+//this keyword
+console.log(this);
+
+//in a regular function this keyword will be undefined
+const calcAge = function (birthYear) {
+  console.log(2030 - birthYear);
+  console.log(this);
+};
+calcAge(2000);
+
+//in Arrow function does not get it's own this keyword and it will be global window
+const calcAgeArrow = birthYear => {
+  console.log(2030 - birthYear);
+  console.log(this);
+};
+calcAgeArrow(2000);
+
+//this keyword inside of a method
 const jonas = {
-  firstName: 'jonas',
-  year: 1995,
+  year: 2000,
   colcAge: function () {
+    console.log(this);
     console.log(2050 - this.year);
   },
-  greet: function () {
-    console.log(this);
-    console.log(`hey ${this.firstName}`);
-  },
+};
+jonas.colcAge();
+
+const mathilda = {
+  year: 2015,
 };
 
-jonas.colcAge();
-jonas.greet();
+mathilda.calcAge = jonas.colcAge;
+mathilda.calcAge();
+*/
