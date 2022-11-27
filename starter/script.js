@@ -102,3 +102,21 @@ const addArrow = (a, b) => {
 };
 addArrow(10, 5, 0);
 */ ////////////////////////
+
+//primitives vs. Objects
+let age = 25;
+let oldAge = age;
+age = 30;
+
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'jonas',
+  age: 30,
+};
+
+const friend = me;
+friend.age = 25;
+console.log(friend);
+console.log(me);
